@@ -15,8 +15,8 @@ def index():
 @app.route('/users/<int:id>')
 def show(id):
   return jsonify(
-    id=id,
-    name='Foo Bar'
+    id = id,
+    name = 'Foo Bar'
   )
 
 if __name__ == '__main__':
