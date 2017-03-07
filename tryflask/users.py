@@ -4,11 +4,11 @@ from tryflask.db import users
 
 @app.route('/users', methods=['GET'])
 def index():
-    return jsonify(users())
+    return jsonify(users()), 200
 
 @app.route('/users/<int:id>', methods=['GET'])
 def show(id):
-    return jsonify(next((x for x in users() if x['id'] == id), None))
+    return jsonify(next((x for x in users() if x['id'] == id), None)), 200
 
 @app.route('/users', methods=['POST'])
 def create():
