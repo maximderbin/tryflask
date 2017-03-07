@@ -1,5 +1,5 @@
-# try-flask
+# tryflask
 
 ### Run flask app
 
-    FLASK_APP=try-flask.py flask run
+    FLASK_APP=tryflask.py flask run
