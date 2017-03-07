@@ -1,7 +1,6 @@
-from flask import Flask
 from flask import jsonify
-from db import users
-app = Flask(__name__)
+from tryflask import app
+from tryflask.db import users
 
 @app.route('/users')
 def index():
