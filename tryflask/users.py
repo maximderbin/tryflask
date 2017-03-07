@@ -13,3 +13,7 @@ def show(id):
 @app.route('/users', methods=['POST'])
 def create():
     return jsonify(users()[0]), 201
+
+@app.route('/users/<int:id>', methods=['PUT', 'PATCH'])
+def upate(id):
+    return jsonify(next((x for x in users() if x['id'] == id), None)), 200
