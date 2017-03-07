@@ -9,3 +9,7 @@ def index():
 @app.route('/users/<int:id>', methods=['GET'])
 def show(id):
     return jsonify(next((x for x in users() if x['id'] == id), None))
+
+@app.route('/users', methods=['POST'])
+def create():
+    return jsonify(users()[0]), 201
