@@ -17,3 +17,7 @@ def create():
 @app.route('/users/<int:id>', methods=['PUT', 'PATCH'])
 def upate(id):
     return jsonify(next((x for x in users() if x['id'] == id), None)), 200
+
+@app.route('/users/<int:id>', methods=['DELETE'])
+def destroy(id):
+    return '', 204
